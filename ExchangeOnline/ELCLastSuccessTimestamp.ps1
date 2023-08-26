@@ -13,7 +13,8 @@ ForEach ($mailbox in $mailboxes) {
         $LastProcessed = "Not processed"}
 
     $reportLine = [PSCustomObject]@{
-            User          = $mailbox.DisplayName
+            DisplayName   = $mailbox.DisplayName
+            Email = $mailbox.UserPrincipalName
             LastProcessed = $LastProcessed
             ItemsDeleted  = $ItemsDeleted.Value}      
         $report += $reportLine
