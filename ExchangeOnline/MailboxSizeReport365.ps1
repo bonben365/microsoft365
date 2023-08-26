@@ -18,7 +18,7 @@ Mailbox Size Report 365
 
 1.Export to CSV File (OFFICE 365)
 
-2.Enter the Mailbox Name with Wild Card (Export) (OFFICE 365)"-ForeGround "Cyan"
+2.Enter the Mailbox Name with Wild Card (Export) (OFFICE 365)" -ForeGround "Cyan"
 
 #----------------
 # Script
