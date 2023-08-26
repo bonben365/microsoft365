@@ -7,13 +7,6 @@
     The script exports a Mailbox Size Report for all Microsoft 365 mailboxes
     to a CSV file. You can also export a single mailbox or WildCard as an option.
 
-    .LINK
-    o365info.com/microsoft-365-mailbox-size-report
-
-    .NOTES
-    Written By: o365info
-    Website:    o365info.com
-
     .CHANGELOG
     V1.00, 03/24/2023 - Initial version
 #>
