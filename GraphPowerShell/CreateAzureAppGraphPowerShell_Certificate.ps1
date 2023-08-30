@@ -1,3 +1,5 @@
+#Connect-MgGraph -Scopes "Application.Read.All","Application.ReadWrite.All","User.Read.All"
+
 $appName =  "testapp1"
 $app = New-MgApplication -DisplayName $appName
 $appObjectId = $app.Id
@@ -25,3 +27,12 @@ Update-MgApplication -ApplicationId $appObjectId -KeyCredentials $CertCredential
 Write-Host "Client ID: $($app.AppID)"
 Write-Host "Tenent ID: $((Get-MgOrganization).Id)"
 Write-Host "Cert Thumbprint: $($mycert.Thumbprint)"
+
+
+#Configuration
+#$ClientId = ''
+#$TenantId = ''
+#$CertificateThumbprint = ''
+
+#Connect to Microsoft Graph with CBA
+#Connect-MgGraph -ClientId $ClientId -TenantId $TenantId -CertificateThumbprint $CertificateThumbprint
