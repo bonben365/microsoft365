@@ -1,3 +1,5 @@
+#Connect-MgGraph -Scopes "Application.Read.All","Application.ReadWrite.All","User.Read.All"
+
 $appName =  "testapp"
 $app = New-MgApplication -DisplayName $appName
 $appObjectId = $app.Id
@@ -34,3 +36,20 @@ Update-MgApplication -ApplicationId $appObjectId -BodyParameter $permissionParam
 Write-Host "Client ID: $($app.AppID)"
 Write-Host "Tenent ID: $((Get-MgOrganization).Id)"
 Write-Host "Client Secret: $($clientSecret.SecretText)"
+
+
+#Configuration
+#$ClientId = ''
+#$TenantId = ''
+#$ClientSecret = ''
+
+#Convert the client secret to a secure string
+#$ClientSecretPass = ConvertTo-SecureString -String $ClientSecret -AsPlainText -Force
+
+#Create a credential object using the client ID and secure string
+#$ClientSecretCredential = New-Object `
+#    -TypeName System.Management.Automation.PSCredential `
+#   -ArgumentList $ClientId, $ClientSecretPass
+
+#Connect to Microsoft Graph with Client Secret
+#Connect-MgGraph -TenantId $TenantId -ClientSecretCredential $ClientSecretCredential
